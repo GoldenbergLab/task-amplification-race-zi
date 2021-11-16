@@ -1,0 +1,95 @@
+
+span.grid{
+    display: grid;
+    grid-template-columns: 140px 140px 140px 140px 140px 140px;
+	grid-template-rows: 160px 160px 160px 160px;
+}
+
+body{
+	background-color: #AAAAAA;
+}
+
+.jspsych-instructions-nav { margin-bottom: 100px; }
+#consentDiv { font-size: 9pt; text-align: justify; }
+
+.HappyA {
+	display: inline-block;
+	width: 70.5px;
+	height: 90.5px;
+	background-size: 5000% 100%;
+	background-image: url('A_Happy.jpg');
+	padding: 30px;
+}
+
+
+.HappyB {
+	display: inline-block;
+	width: 70.5px;
+	height: 90.5px;
+	background-size: 5000% 100%;
+	background-image: url('B_Happy.jpg');
+	padding: 30px;
+}
+
+
+.HappyC {
+	display: inline-block;
+	width: 70.5px;
+	height: 90.5px;
+	background-size: 5000% 100%;
+	background-image: url('C_Happy.jpg');
+	padding: 30px;
+}
+
+
+.HappyD {
+	display: inline-block;
+	width: 70.5px;
+	height: 90.5px;
+	background-size: 5000% 100%;
+	background-image: url('D_Happy.jpg');
+	padding: 30px;
+}
+
+
+.AngryA {
+	display: inline-block;
+	width: 70.5px;
+	height: 90.5px;
+	background-size: 5000% 100%;
+	background-image: url('A_Angry.jpg');
+	padding: 30px;
+}
+
+.AngryB {
+	display: inline-block;
+	width: 70.5px;
+	height: 90.5px;
+	background-size: 5000% 100%;
+	background-image: url('B_Angry.jpg');
+	padding: 30px;
+}
+
+
+.AngryC {
+	display: inline-block;
+	width: 70.5px;
+	height: 90.5px;
+	background-size: 5000% 100%;
+	background-image: url('C_Angry.jpg');
+	padding: 30px;
+}
+
+
+.AngryD {
+	display: inline-block;
+	width: 70.5px;
+	height: 90.5px;
+	background-size: 5000% 100%;
+	background-image: url('D_Angry.jpg');
+	padding: 30px;
+}
+
+div.preload {
+    display: none;
+}

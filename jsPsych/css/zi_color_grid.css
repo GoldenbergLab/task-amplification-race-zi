@@ -1,0 +1,16 @@
+.ins_img { /* class of images that appear in instructions */
+    display: grid; /* display as grid */
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;  /* 10 columns */
+    justify-content: center;
+}
+
+.ins_img img {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+ }
+
+body { /* bg color in css instead of html */
+   background-color: #E9E9E9;
+}
