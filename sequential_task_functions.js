@@ -156,42 +156,44 @@ function getTimeAndFace (){  //get randomized time of fixation by randomly choos
     //choose face_itive or negative valence before displaying faces
     Face.emotionX = getRandomElement([50,100]); //1 is smallest 
     //choose the identity of the face
-    Face.b_person_ratio = getRandomElement([0.25,0.5,0.75]);
+    Face.first_person_ratio = getRandomElement([0.25,0.5,0.75]);
 
     return Face.fixationTime;
 }
 
 function make_stim(stim_array){
 
-  Face.b_faces_no = Face.b_person_ratio * Face.array_length //find number of black faces
-  Face.w_faces_no = (1-Face.b_person_ratio) * Face.array_length
+  Face.first_faces_no = Face.first_person_ratio * Face.array_length //find number of black faces
+  Face.second_faces_no = (1-Face.first_person_ratio) * Face.array_length
 
-  Face.b_identity = getRandomElement(["E","F","G","H"]) //find identity of b and w person
-  Face.w_identity = getRandomElement(["A","B","C","D"])
+  Face.first_identity = getRandomElement(["B","C","E","F"]) //find identity of b and w person
+  Face.all_arrays = ["B","C","E","F"]
+  Face.all_arrays.splice(Face.idx, 1)
+  Face.second_identity = getRandomElement(Face.all_arrays)
 
   Face.personArray = []
 
-  if(Face.b_person_ratio == 0 ||Face.b_person_ratio==1){
+  if(Face.first_person_ratio == 0 ||Face.first_person_ratio==1){
     for(p of stim_array){
-      if (Face.b_person_ratio == 0){
-        Face.personArray.push(Face.w_identity)
+      if (Face.first_person_ratio == 0){
+        Face.personArray.push(Face.second_identity)
       }
 
-      else if (Face.b_person_ratio == 1){
-        Face.personArray.push(Face.b_identity)
+      else if (Face.first_person_ratio == 1){
+        Face.personArray.push(Face.first_identity)
       }
 
     }
   }
 
-  else if (Face.b_person_ratio == 0.5||Face.b_person_ratio==0.25||Face.b_person_ratio==0.75){
-    var part_array = Face.array_length * Face.b_person_ratio
+  else if (Face.first_person_ratio == 0.5||Face.first_person_ratio==0.25||Face.first_person_ratio==0.75){
+    var part_array = Face.array_length * Face.first_person_ratio
     for (i = 0; i < part_array; i++){
-      Face.personArray.push(Face.b_identity)
+      Face.personArray.push(Face.first_identity)
     }
 
     for (i = 0; i < Face.array_length-part_array; i++){
-      Face.personArray.push(Face.w_identity)
+      Face.personArray.push(Face.second_identity)
     }
 
   }
@@ -240,16 +242,16 @@ function getFaceSample (){
   function getScale (){ //generate the rating scale depending on the person and valence randomly chosen in faceArray
     var scale = [];
 
-    if(Face.b_person_ratio == 0.5||Face.b_person_ratio==0.25||Face.b_person_ratio==0.75){
-      order = [Face.b_identity, Face.w_identity];
+    if(Face.first_person_ratio == 0.5||Face.first_person_ratio==0.25||Face.first_person_ratio==0.75){
+      order = [Face.first_identity, Face.second_identity];
       shuffle(order);
     }
     for(i = 1; i < 51; i++){
 
-      if(Face.b_person_ratio==0){
-       scale.push('img/'+Face.w_identity+(Face.emotionX +i) + '.jpg')}
-      else if(Face.b_person_ratio==1){
-       scale.push('img/'+Face.b_identity+(Face.emotionX +i) + '.jpg')}
+      if(Face.first_person_ratio==0){
+       scale.push('img/'+Face.second_identity+(Face.emotionX +i) + '.jpg')}
+      else if(Face.first_person_ratio==1){
+       scale.push('img/'+Face.first_identity+(Face.emotionX +i) + '.jpg')}
       else{
         scale.push(['img/'+order[0]+(Face.emotionX +i) + '.jpg', 'img/'+order[1]+(Face.emotionX +i) + '.jpg'])}
       }
