@@ -1,4 +1,4 @@
-# amplification-race-binary-task
+# amplification-race-task
 
 - **Project goal:** This is a version of the amplification task using faces of different races. The goal of this was to discover if different races of faces produced different amplification results. 
 - **Important files:** 
