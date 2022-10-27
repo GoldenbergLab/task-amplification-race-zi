@@ -1,11 +1,12 @@
 # amplification-race-binary-task
 
-- **Project goal:** 
+- **Project goal:** This is a version of the amplification task using faces of different races. The goal of this was to discover if different races of faces produced different amplification results. 
 - **Important files:** 
-- **Papers:** 
+- **Papers:** Goldenberg, A., Huang, Z., LaFollette, K., Weisz, E., & Cikara, M. (pre-print). Judgement of
+crowds as emotional increases with the proportion of Black faces. [data & code](https://osf.io/ywbxj/), preprint
 - **To use this task:** Clone repository and use the main task file. You may have to comment out the consent in order for it to work locally (lines 142 to 147).
 
-This is a binary version of the amplification task. In the binary version of this task, participants must rate the 
+
 
 main branch: the version of the task with either black-white or white-black arrays in facial identities BCEF. BC are white faces and EF are black faces.
 
