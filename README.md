@@ -13,4 +13,4 @@ crowds as emotional increases with the proportion of Black faces. [data & code](
 
 **bb-ww-mixed-arrays:** this version of the task is the same as the one above but it allows for same-race (black-black and white-white) arrays in addition to the mixed race ones.
 
-**single-face:** version of the task with only one face
+**single-face:** version of the task with only one face. This was a binary version of the task where participants would rate the single face as "EMOTIONAL" or "NOT EMOTIONAL" rather than providing an estimate using the sliding face scale. 
