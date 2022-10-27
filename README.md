@@ -1,7 +1,5 @@
 # amplification-race-binary-task
 
-# task-or-repo-name
-
 - **Project goal:** 
 - **Important files:** 
 - **Papers:** 
